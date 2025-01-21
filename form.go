@@ -65,7 +65,7 @@ func NewForm(parent Controller) *Form {
 	RegClassOnlyOnce("winc_Form")
 
 	fm.isForm = true
-	fm.hwnd = CreateWindow("winc_Form", parent, w32.WS_EX_CONTROLPARENT|w32.WS_EX_APPWINDOW, w32.WS_OVERLAPPEDWINDOW)
+	fm.hwnd = CreateWindowEx("winc_Form", parent, w32.WS_EX_CONTROLPARENT|w32.WS_EX_APPWINDOW, w32.WS_OVERLAPPEDWINDOW)
 	fm.parent = parent
 
 	// this might fail if icon resource is not embedded in the binary
